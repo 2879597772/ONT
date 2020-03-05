@@ -16,7 +16,7 @@
 #### 注意事项
 ##### 本教程以及其包含的固件、工具所有人可免费下载，完全开源，开源协议遵照“[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)”，
 ![image](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
-[![](https://img.shields.io/badge/download-1K-brightgreen.svg)](https://www.baidu.com)
+[![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
 ##### 其意思为“知识共享-署名-非商业性-相同方式共享，即此教程共享，转发必须注明作者本人-不允许以各种方法拿此教程获利，此共享协议对中国大陆有效，受中国法律保护！用本教程获利的人，我将保留依法追责的权力！
 ·此教程目的是为了避开【宽带论坛】【恩山无线】那些无良管理和商家，把一些简单问题，他人解决后分享的问题收费化  
 ·如果你也对折腾光猫有兴趣，有意发类似教程，有意分享您的换猫经验，手上有工具或固件愿意分享出来，请在“issues”发表出来，我将注明您的信息并发表出来  
