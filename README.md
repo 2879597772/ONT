@@ -50,7 +50,8 @@ telnet，乃破解光猫必有的一项，开启后可通过telnet对光猫进�
 · 将配置文件“<X_HW_CLITelnetAccess”字段做如下修改： 
 ```   
 <X_HW_CLITelnetAccess Access="1" TelnetPort="23" OutTelnetPort="23"/>  
-```
+```  
+![image](https://github.com/2879597772/ONT/blob/master/images/open_telnet3.jpg)  
 · 加密后插回光猫，将光猫断电重启，配置文件即可恢复
 ### 补全shell
 ### 修改连接设备数量
