@@ -44,10 +44,7 @@ telnet，乃破解光猫必有的一项，开启后可通过telnet对光猫进�
 ##### 2· 修改配置开启
 部分光猫由于地区/固件影响，没有办法用上图方式开启telnet，但若在“管理>设备管理”中有“USB备份设置”的话，即可用此方法开启telnet  
 ·在“USB备份设置”中勾选“快速恢复”以便恢复配置  
-·在光猫背面插入U盘后点击“备份配置”（插入U盘后刷新界面） 
-##### 3· TTL修改参数
-目前正在查询相关资料和测试
-
+·在光猫背面插入U盘后点击“备份配置”（插入U盘后刷新界面）  
 ![image](https://github.com/2879597772/ONT/blob/master/images/open_telnet2.jpg)  
 · 拔出U盘，插入电脑，可以看见U盘目录下有“e8_Config_Backup”文件夹，内有一个*.cfg的文件，此文件就是我们要修改的文件  
 · 此文件一般都被加密，请使用目录工具中的“华为配置文件解密工具”进行解密  
@@ -56,7 +53,9 @@ telnet，乃破解光猫必有的一项，开启后可通过telnet对光猫进�
 <X_HW_CLITelnetAccess Access="1" TelnetPort="23" OutTelnetPort="23"/>  
 ```  
 ![image](https://github.com/2879597772/ONT/blob/master/images/open_telnet3.jpg)  
-· 加密后插回光猫，将光猫断电重启，配置文件即可恢复，telnet开启
+· 加密后插回光猫，将光猫断电重启，配置文件即可恢复，telnet开启  
+##### 3· TTL修改参数
+目前正在查询相关资料和测试
 ### 补全shell
 全新光猫一般默认不带shell，telnet进入光猫后，输入su>shell>help查看可用命令，如果少的可怜，就需要补全shell  
 华为光猫补全shell方法都大同小异，成功率不高的原因往往在于补全所需的文件，此类文件一般都由某些大神制作，很少外流，本人已将可找到的补全文件都放在工具中了，大家可以一个一个慢慢试验  
@@ -72,11 +71,27 @@ TotalTerminalNumber="40"
 ```  
 ![image](https://github.com/2879597772/ONT/blob/master/images/TotalTerminalNumber.jpg)   
 其中`40`就是控制设备数量的关键，可以按照你的需求自行修改  
+· 修改后进行加密，按照[`开启telne`](#修改配置开启)的方法恢复  
 ### 修改到原厂界面
 ### 修改到电信界面
 ### 修改到联通界面
 ### 修改到移动界面
 ### itms伪认证
+`此条影响范围小，一般改回原厂界面都不需要这步操作，但总有例外，特别是运营商定制光猫，就算改回原厂，也容易出现OLT注册成功，ITMS注册失败导致“获取到ip地址、可以看iptv、ping外网ip可以通、光猫自检通过，但是局域网内打开任意网址自动跳转至光猫注册界面`  
+此电信定制猫出现较多，本人多方查询后才找到，原因是此方法大都为论坛中楼中楼回复，搜索引擎收录较少！废话不多说，以下是详细教程：  
+· 下载配置文件并解密，见[`开启telne部分`](#修改配置开启)  
+· 搜索`<X_HW_UserInfo`字段
+· 将  
+```
+<X_HW_UserInfo UserName="" UserId="" Status="99" Limit="5" Times="0" Result="99" X_HW_InformStatus="0" X_HW_AcsCnnctSatus="0" ForceSupport="1" SameWithPonInfo="1" X_HW_RegisterMode="1" />
+<X_HW_ServiceManage FtpEnable="0"   FtpPort="21" FtpRoorDir="/mnt/ftproot/" FtpUserNum="0" />
+```  
+改为这样  
+```
+<X_HW_UserInfo UserName="" UserId="" Status="0" Limit="10" Times="0" Result="1" X_HW_InformStatus="0" X_HW_AcsCnnctSatus="0" ForceSupport="1" SameWithPonInfo="1" X_HW_RegisterMode="1" />
+<X_HW_ServiceManage FtpEnable="0"   FtpPort="21" FtpRoorDir="/mnt/ftproot/" FtpUserNum="0" />
+```  
+· 其中主要修改的就是：`Status=" " Limit=" " Times=" " Result=" "`为itms认证配置  
 
 ### 改E/G模式
 ### 救砖方法
