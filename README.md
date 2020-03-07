@@ -30,7 +30,8 @@
 - [修改到联通界面](#修改到联通界面)
 - [修改到移动界面](#修改到移动界面)
 - [itms伪认证](#itms伪认证)
-- [改E/G模式（部分可改双模）](#改E/G模式)  
+- [修改设备Mac、SN、](#改E/G模式)   
+- [改E/G模式（部分可改双模）](#改E/G模式)   
 - [救砖方法](#救砖方法)
 - [相应工具的分享](#相应工具的分享)
 ## 正文
@@ -91,7 +92,7 @@ TotalTerminalNumber="40"
 <X_HW_UserInfo UserName="" UserId="" Status="0" Limit="10" Times="0" Result="1" X_HW_InformStatus="0" X_HW_AcsCnnctSatus="0" ForceSupport="1" SameWithPonInfo="1" X_HW_RegisterMode="1" />
 <X_HW_ServiceManage FtpEnable="0"   FtpPort="21" FtpRoorDir="/mnt/ftproot/" FtpUserNum="0" />
 ```  
-· 其中主要修改的就是：`Status=" " Limit=" " Times=" " Result=" "`为itms认证配置  
+· 其中主要修改的就是：`Status=" " Limit=" " Times=" " Result=" "`其为itms认证配置  
 
 ### 改E/G模式
 ### 救砖方法
